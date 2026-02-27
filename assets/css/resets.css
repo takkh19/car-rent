@@ -34,6 +34,8 @@ img, picture, video, canvas, svg {
 /* 7. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
+  border: none;
+  outline: none;
 }
 
 /* 8. Avoid text overflows */
