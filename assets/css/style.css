@@ -9,6 +9,26 @@
     --main-font: "Plus Jakarta Sans", sans-serif;
 }
 
+body {
+    font-family: var(--main-font);
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: inherit;
+    
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 10px 20px;
+    
+    & a {
+        color: inherit;
+    }
+}
+
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -24,7 +44,7 @@
                 font-weight: 700;
                 font-size: 32px;
                 color: var(--primary-color);
-                font-family: var(--main-font);
+                font-family: inherit;
                 text-transform: uppercase;
             }
         }
@@ -47,7 +67,7 @@
                 & input {
                     border:none;
                     width: 100%;
-                    font-family: var(--main-font);
+                    font-family: inherit;
                     font-weight: 500;
                     font-size: 14px;
                     &:focus {
@@ -121,6 +141,65 @@
     }
 }
 
+main {
+    background-color: var(--background-color);
+    padding: 32px 64px 64px 64px;
+}
+
+section.ads-section {
+    & .ad-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+
+        & .ad-card {
+            width: 640px;
+            padding: 1.5rem;
+            padding-bottom: 0px;
+
+            border-radius: 10px;
+            color: white;
+
+            &:first-child {
+                background-color: var(--information-color);
+            }
+            
+            &:last-child {
+                background-color: var(--primary-color);
+
+                & .btn {
+                    background-color: var(--information-color);
+                }
+            }
+
+            & .ad-info {
+                width: 284px;
+                
+                & h2 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
+    
+                & p {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-block: 1rem 1.25rem;
+                }
+            }
+
+
+            & img {
+                position: relative;
+
+                left: 50%;
+                bottom: 0px;
+
+                transform: translate(-50%, -1rem);
+            }
+        }
+    }
+}
 
 @keyframes jump-shaking {
   0% { transform: translateX(0) }
