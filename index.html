@@ -115,6 +115,89 @@
                 </div>
             </div>
         </section>
+
+        <section class="filters-section">
+            <div class="filter-wrapper">
+                <form class="pick-up">
+                    <label>
+                        <input type="radio" name="pick-up">
+                        Pick - Up
+                    </label>
+                    <div class="form-group">
+                        <div class="select-container">
+                            <label for="location">
+                                Location
+                            </label>
+                            <select name="location" id="location">
+                                <option value="" disabled selected hidden>Select your city</option>
+                                <option value="jakarta">Jakarta</option>
+                                <option value="bandung">Bandung</option>
+                            </select>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="select-container">
+                            <label for="date">
+                                Date
+                            </label>
+                            <input type="text" placeholder="Select your date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="select-container">
+                            <label for="time">
+                                Time
+                            </label>
+                            <input type="text" placeholder="Select your time" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+                        </div>
+                    </div>
+                </form>
+                <button class="btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7.16051 3.83577L7.16051 17.4536" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M3.08273 7.93188L7.1605 3.83522L11.2383 7.93188" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17.0887 20.1671L17.0887 6.54934" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M21.1665 16.071L17.0887 20.1677L13.0109 16.071" stroke="white" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <form class="drop-off">
+                    <label>
+                        <input type="radio" name="drop-off">
+                        Drop - Off
+                    </label>
+                    <div class="form-group">
+                        <div class="select-container">
+                            <label for="location">
+                                Location
+                            </label>
+                            <select name="location" id="location">
+                                <option value="" disabled selected hidden>Select your city</option>
+                                <option value="jakarta">Jakarta</option>
+                                <option value="bandung">Bandung</option>
+                            </select>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="select-container">
+                            <label for="date">
+                                Date
+                            </label>
+                            <input type="text" placeholder="Select your date" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="select-container">
+                            <label for="time">
+                                Time
+                            </label>
+                            <input type="text" placeholder="Select your time" onfocus="(this.type='time')" onblur="if(!this.value) this.type='text'">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
 </body>

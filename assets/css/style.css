@@ -13,6 +13,11 @@ body {
     font-family: var(--main-font);
 }
 
+main {
+    background-color: var(--background-color);
+    padding: 32px 64px 64px 64px;
+}
+
 .btn {
     font-family: inherit;
     font-size: 1rem;
@@ -141,15 +146,11 @@ body {
     }
 }
 
-main {
-    background-color: var(--background-color);
-    padding: 32px 64px 64px 64px;
-}
 
 section.ads-section {
     & .ad-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         gap: 32px;
 
         & .ad-card {
@@ -199,6 +200,58 @@ section.ads-section {
             }
         }
     }
+}
+
+section.filters-section {
+    margin-top: 32px;
+    & .filter-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 44px;
+        & form {
+            background-color: var(--primary-color-0);
+            border-radius: 10px;
+            padding: 24px 48px;
+            & .form-group {
+                gap: 24px;
+                display: flex;
+                margin-top: 16px;
+                & .vertical-line {
+                    width: 1px;
+                    background-color: #C3D4E966;
+                }
+                & .select-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    & label {
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    & select {
+                        appearance: none;
+                        color: var(--secondary-color-300);
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                    & input {
+                        font-size: 12px;
+                        font-weight: 500;
+                        &::placeholder {
+                            color: var(--secondary-color-300);
+                        }
+                    }
+                    
+                }
+            }
+        }
+        & button {
+            background-color: var(--primary-color);
+
+        }
+    }
+    
 }
 
 @keyframes jump-shaking {
