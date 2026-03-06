@@ -9,6 +9,8 @@
     --main-font: "Plus Jakarta Sans", sans-serif;
 }
 
+/* primary styles */
+
 body {
     font-family: var(--main-font);
 }
@@ -33,6 +35,8 @@ main {
         color: inherit;
     }
 }
+
+/* header styles */
 
 .header-wrapper {
     display: flex;
@@ -146,6 +150,7 @@ main {
     }
 }
 
+/* ads section styles */
 
 section.ads-section {
     & .ad-wrapper {
@@ -157,13 +162,49 @@ section.ads-section {
             width: 640px;
             padding: 1.5rem;
             padding-bottom: 0px;
+            
 
             border-radius: 10px;
             color: white;
 
             &:first-child {
-                background-color: var(--information-color);
-            }
+                    background-color: (var(--information-color));
+                    --scale: 2;
+                    --base-thickness: 12px;
+                    --base-gap: 20px;
+                    --t: calc(var(--base-thickness) * var(--scale));
+                    --g: calc(var(--base-gap) * var(--scale));
+                    --ring-color: rgba(255, 255, 255, 0.08);
+            
+                    background: radial-gradient(circle at 215px calc(100% - 60px),
+                            var(--ring-color) 0px,
+                            var(--ring-color) var(--t),
+                            transparent var(--t),
+                            transparent calc(var(--t) + var(--g)),
+                            var(--ring-color) calc(var(--t) + var(--g)),
+                            var(--ring-color) calc(var(--t) * 2 + var(--g)),
+                            transparent calc(var(--t) * 2 + var(--g)),
+                            transparent calc(var(--t) * 2 + var(--g) * 2),
+                            var(--ring-color) calc(var(--t) * 2 + var(--g) * 2),
+                            var(--ring-color) calc(var(--t) * 3 + var(--g) * 2),
+                            transparent calc(var(--t) * 3 + var(--g) * 2),
+                            transparent calc(var(--t) * 3 + var(--g) * 3),
+                            var(--ring-color) calc(var(--t) * 3 + var(--g) * 3),
+                            var(--ring-color) calc(var(--t) * 4 + var(--g) * 3),
+                            transparent calc(var(--t) * 4 + var(--g) * 3),
+                            transparent calc(var(--t) * 4 + var(--g) * 4),
+                            var(--ring-color) calc(var(--t) * 4 + var(--g) * 4),
+                            var(--ring-color) calc(var(--t) * 5 + var(--g) * 4),
+                            transparent calc(var(--t) * 5 + var(--g) * 4),
+                            transparent calc(var(--t) * 5 + var(--g) * 5),
+                            var(--ring-color) calc(var(--t) * 5 + var(--g) * 5),
+                            var(--ring-color) calc(var(--t) * 6 + var(--g) * 5),
+                            transparent calc(var(--t) * 6 + var(--g) * 5),
+                            transparent calc(var(--t) * 6 + var(--g) * 6),
+                            var(--ring-color) calc(var(--t) * 6 + var(--g) * 6),
+                            var(--ring-color) calc(var(--t) * 7 + var(--g) * 6),
+                            transparent calc(var(--t) * 7 + var(--g) * 6)), #5eabff;
+                }
             
             &:last-child {
                 background-color: var(--primary-color);
@@ -201,6 +242,8 @@ section.ads-section {
         }
     }
 }
+
+/* filters section styles */
 
 section.filters-section {
     margin-top: 32px;
@@ -253,6 +296,99 @@ section.filters-section {
     }
     
 }
+
+/* popular car section */
+
+section.popular-car{
+    margin-top:32px;
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-bottom:20px;
+        & h3 {
+            font-size:16px;
+            font-weight: 600;
+            line-height: 100%;
+            color: var(--secondary-color-300);
+        }
+        a {
+            font-size:16px;
+            font-weight: 600;
+            line-height: 100%;
+            color: var(--primary-color);
+        }
+    }
+}
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    & .car-card{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: var(--primary-color-0);
+        & .card-header{
+            display: flex;
+            justify-content: space-between;
+            & .car-name {
+                & h4 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: -3%;
+                }
+                & p {
+                    font-size: 14px;
+                    font-weight: 700;
+                    letter-spacing: -2%;
+                    color: var(--secondary-color-300);
+                }
+            }
+    
+        }
+        & .car-details{
+            &car-img{
+                display: flex;
+                justify-content: center;
+            }
+            & .specifications{
+                display: flex;
+                gap: 16px;
+                & .fuel,.transmission,.capacity{
+                    display: flex;
+                    gap: 6px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: -2%;
+                    color: var(--secondary-color-300);
+                }
+            }
+        }
+        .rent {
+            display: flex;
+            gap: 24px;
+            & .price-tag{
+                & p {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 100%;
+                    & span {
+                        font-size: 14px;
+                        font-weight: 700;
+                        line-height: 100%;
+                        color: var(--secondary-color-300);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* animations */
 
 @keyframes jump-shaking {
   0% { transform: translateX(0) }
