@@ -324,20 +324,25 @@ section.popular-car{
     display: flex;
     justify-content: space-between;
     gap: 32px;
-    & .car-card{
+
+    & .car-card {
         display: flex;
         flex-direction: column;
         border-radius: 10px;
         background-color: var(--primary-color-0);
-        & .card-header{
+
+        & .card-header {
             display: flex;
             justify-content: space-between;
+            margin: 24px;
+
             & .car-name {
                 & h4 {
                     font-size: 20px;
                     font-weight: 700;
                     letter-spacing: -3%;
                 }
+
                 & p {
                     font-size: 14px;
                     font-weight: 700;
@@ -345,17 +350,40 @@ section.popular-car{
                     color: var(--secondary-color-300);
                 }
             }
-    
+
+            & .favorite:hover svg path {
+
+                fill: var(--accent-color);
+                stroke: var(--accent-color);
+            }
+
         }
-        & .car-details{
-            &car-img{
+
+        & .car-details {
+
+            & .car-img {
+                position: relative;
                 display: flex;
                 justify-content: center;
+                margin: 36px 36px 64px 36px;
+
+                &::before {
+                    content: '';
+                    width: 232px;
+                    height: 72px;
+                    position: absolute;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #FFFFFF 100%);
+                }
             }
-            & .specifications{
+
+            & .specifications {
                 display: flex;
                 gap: 16px;
-                & .fuel,.transmission,.capacity{
+                margin: 24px;
+
+                & .fuel,
+                .transmission,
+                .capacity {
                     display: flex;
                     gap: 6px;
                     font-size: 14px;
@@ -365,14 +393,19 @@ section.popular-car{
                 }
             }
         }
+
         .rent {
             display: flex;
+            align-items: center;
             gap: 24px;
-            & .price-tag{
+            margin: 0px 24px 24px 24px;
+
+            & .price-tag {
                 & p {
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 100%;
+
                     & span {
                         font-size: 14px;
                         font-weight: 700;
@@ -381,11 +414,15 @@ section.popular-car{
                     }
                 }
             }
+
+            .btn {
+                & a {
+                    color: var(--primary-color-0);
+                }
+            }
         }
     }
 }
-
-
 
 
 /* animations */
