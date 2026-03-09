@@ -7,6 +7,7 @@
     --information-color: #54A6FF;
     --accent-color: #ED3F3F;
     --main-font: "Plus Jakarta Sans", sans-serif;
+    --footer-color: #13131399;
 }
 
 /* primary styles */
@@ -26,13 +27,13 @@ main {
     font-weight: 600;
     text-transform: capitalize;
     color: inherit;
-    
+
     background-color: var(--primary-color);
     border-radius: 4px;
     padding: 10px 20px;
-    
+
     & a {
-        color: inherit;
+        color: var(--primary-color-0);
     }
 }
 
@@ -57,7 +58,8 @@ main {
                 text-transform: uppercase;
             }
         }
-        & .search{
+
+        & .search {
             & form {
                 display: flex;
                 justify-content: space-between;
@@ -67,18 +69,20 @@ main {
                 border-radius: 70px;
                 border: 1px solid #C3D4E966;
                 padding: 10px 20px;
-                gap:20px;
-                    & svg{
-                        cursor: pointer;
-                    }
-                
+                gap: 20px;
+
+                & svg {
+                    cursor: pointer;
+                }
+
 
                 & input {
-                    border:none;
+                    border: none;
                     width: 100%;
                     font-family: inherit;
                     font-weight: 500;
                     font-size: 14px;
+
                     &:focus {
                         outline: none;
 
@@ -87,7 +91,7 @@ main {
 
                 & .filter {
                     &:hover {
-                    animation: jump-shaking 0.83s infinite;
+                        animation: jump-shaking 0.83s infinite;
                     }
                 }
             }
@@ -98,31 +102,36 @@ main {
         display: flex;
         gap: 20px;
         align-items: center;
+
         & .cta-item {
             border-radius: 50%;
             border: 1px solid #C3D4E966;
             width: 44px;
             height: 44px;
-            display:flex;
+            display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             transition: 0.3s;
-            & svg{
+
+            & svg {
                 transition: inherit;
             }
 
             &:hover {
                 border-color: #c3d4e9fa;
-                & svg{
+
+                & svg {
                     transform: scale(0.9);
                 }
             }
         }
+
         & .notifications {
             position: relative;
+
             &::after {
-                content:"";
+                content: "";
                 width: 11px;
                 height: 11px;
                 background-color: #FF4423;
@@ -135,13 +144,15 @@ main {
 
         & .user {
             transition: 0.3s;
-             
+
             cursor: pointer;
-            &  img{
+
+            & img {
                 width: 44px;
                 height: 44px;
                 border-radius: 50%;
                 transition: inherit;
+
                 &:hover {
                     transform: scale(0.9);
                 }
@@ -162,50 +173,50 @@ section.ads-section {
             width: 640px;
             padding: 1.5rem;
             padding-bottom: 0px;
-            
+
 
             border-radius: 10px;
             color: white;
 
             &:first-child {
-                    background-color: (var(--information-color));
-                    --scale: 2;
-                    --base-thickness: 12px;
-                    --base-gap: 20px;
-                    --t: calc(var(--base-thickness) * var(--scale));
-                    --g: calc(var(--base-gap) * var(--scale));
-                    --ring-color: rgba(255, 255, 255, 0.08);
-            
-                    background: radial-gradient(circle at 215px calc(100% - 60px),
-                            var(--ring-color) 0px,
-                            var(--ring-color) var(--t),
-                            transparent var(--t),
-                            transparent calc(var(--t) + var(--g)),
-                            var(--ring-color) calc(var(--t) + var(--g)),
-                            var(--ring-color) calc(var(--t) * 2 + var(--g)),
-                            transparent calc(var(--t) * 2 + var(--g)),
-                            transparent calc(var(--t) * 2 + var(--g) * 2),
-                            var(--ring-color) calc(var(--t) * 2 + var(--g) * 2),
-                            var(--ring-color) calc(var(--t) * 3 + var(--g) * 2),
-                            transparent calc(var(--t) * 3 + var(--g) * 2),
-                            transparent calc(var(--t) * 3 + var(--g) * 3),
-                            var(--ring-color) calc(var(--t) * 3 + var(--g) * 3),
-                            var(--ring-color) calc(var(--t) * 4 + var(--g) * 3),
-                            transparent calc(var(--t) * 4 + var(--g) * 3),
-                            transparent calc(var(--t) * 4 + var(--g) * 4),
-                            var(--ring-color) calc(var(--t) * 4 + var(--g) * 4),
-                            var(--ring-color) calc(var(--t) * 5 + var(--g) * 4),
-                            transparent calc(var(--t) * 5 + var(--g) * 4),
-                            transparent calc(var(--t) * 5 + var(--g) * 5),
-                            var(--ring-color) calc(var(--t) * 5 + var(--g) * 5),
-                            var(--ring-color) calc(var(--t) * 6 + var(--g) * 5),
-                            transparent calc(var(--t) * 6 + var(--g) * 5),
-                            transparent calc(var(--t) * 6 + var(--g) * 6),
-                            var(--ring-color) calc(var(--t) * 6 + var(--g) * 6),
-                            var(--ring-color) calc(var(--t) * 7 + var(--g) * 6),
-                            transparent calc(var(--t) * 7 + var(--g) * 6)), #5eabff;
-                }
-            
+                background-color: (var(--information-color));
+                --scale: 2;
+                --base-thickness: 12px;
+                --base-gap: 20px;
+                --t: calc(var(--base-thickness) * var(--scale));
+                --g: calc(var(--base-gap) * var(--scale));
+                --ring-color: rgba(255, 255, 255, 0.08);
+
+                background: radial-gradient(circle at 215px calc(100% - 60px),
+                        var(--ring-color) 0px,
+                        var(--ring-color) var(--t),
+                        transparent var(--t),
+                        transparent calc(var(--t) + var(--g)),
+                        var(--ring-color) calc(var(--t) + var(--g)),
+                        var(--ring-color) calc(var(--t) * 2 + var(--g)),
+                        transparent calc(var(--t) * 2 + var(--g)),
+                        transparent calc(var(--t) * 2 + var(--g) * 2),
+                        var(--ring-color) calc(var(--t) * 2 + var(--g) * 2),
+                        var(--ring-color) calc(var(--t) * 3 + var(--g) * 2),
+                        transparent calc(var(--t) * 3 + var(--g) * 2),
+                        transparent calc(var(--t) * 3 + var(--g) * 3),
+                        var(--ring-color) calc(var(--t) * 3 + var(--g) * 3),
+                        var(--ring-color) calc(var(--t) * 4 + var(--g) * 3),
+                        transparent calc(var(--t) * 4 + var(--g) * 3),
+                        transparent calc(var(--t) * 4 + var(--g) * 4),
+                        var(--ring-color) calc(var(--t) * 4 + var(--g) * 4),
+                        var(--ring-color) calc(var(--t) * 5 + var(--g) * 4),
+                        transparent calc(var(--t) * 5 + var(--g) * 4),
+                        transparent calc(var(--t) * 5 + var(--g) * 5),
+                        var(--ring-color) calc(var(--t) * 5 + var(--g) * 5),
+                        var(--ring-color) calc(var(--t) * 6 + var(--g) * 5),
+                        transparent calc(var(--t) * 6 + var(--g) * 5),
+                        transparent calc(var(--t) * 6 + var(--g) * 6),
+                        var(--ring-color) calc(var(--t) * 6 + var(--g) * 6),
+                        var(--ring-color) calc(var(--t) * 7 + var(--g) * 6),
+                        transparent calc(var(--t) * 7 + var(--g) * 6)), #5eabff;
+            }
+
             &:last-child {
                 background-color: var(--primary-color);
 
@@ -216,13 +227,13 @@ section.ads-section {
 
             & .ad-info {
                 width: 284px;
-                
+
                 & h2 {
                     font-size: 2rem;
                     font-weight: 600;
                     text-transform: capitalize;
                 }
-    
+
                 & p {
                     font-size: 1rem;
                     font-weight: 500;
@@ -247,79 +258,103 @@ section.ads-section {
 
 section.filters-section {
     margin-top: 32px;
-    & .filter-wrapper{
+
+    & .filter-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 44px;
+
         & form {
             background-color: var(--primary-color-0);
             border-radius: 10px;
             padding: 24px 48px;
+
             & .form-group {
                 gap: 24px;
                 display: flex;
                 margin-top: 16px;
+
                 & .vertical-line {
                     width: 1px;
                     background-color: #C3D4E966;
                 }
+
                 & .select-container {
                     display: flex;
                     flex-direction: column;
                     gap: 8px;
+
                     & label {
                         font-size: 16px;
                         font-weight: 700;
                     }
+
                     & select {
                         appearance: none;
                         color: var(--secondary-color-300);
                         font-size: 12px;
                         font-weight: 500;
                     }
+
                     & input {
                         font-size: 12px;
                         font-weight: 500;
+
                         &::placeholder {
                             color: var(--secondary-color-300);
                         }
                     }
-                    
+
                 }
             }
         }
+
         & button {
             background-color: var(--primary-color);
+            height: 60px;
+            width: 60px;
+            border-radius: 10px;
 
         }
     }
-    
+
 }
 
-/* popular car section */
+/* popular car and recomendation car section */
 
-section.popular-car{
-    margin-top:32px;
+section.popular-car,
+section.recomendation-car {
+    margin-top: 32px;
+
     header {
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        margin-bottom:20px;
+        margin-bottom: 20px;
+
         & h3 {
-            font-size:16px;
+            font-size: 16px;
             font-weight: 600;
             line-height: 100%;
             color: var(--secondary-color-300);
         }
+
         a {
-            font-size:16px;
+            font-size: 16px;
             font-weight: 600;
             line-height: 100%;
             color: var(--primary-color);
         }
     }
 }
+
+.recomendation-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
 .card-wrapper {
     display: flex;
     justify-content: space-between;
@@ -401,10 +436,15 @@ section.popular-car{
             margin: 0px 24px 24px 24px;
 
             & .price-tag {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
                 & p {
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 100%;
+                    margin-bottom: 4px;
 
                     & span {
                         font-size: 14px;
@@ -413,13 +453,116 @@ section.popular-car{
                         color: var(--secondary-color-300);
                     }
                 }
-            }
 
-            .btn {
-                & a {
-                    color: var(--primary-color-0);
+                & .discount {
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 100%;
+                    text-decoration: line-through;
+                    color: var(--secondary-color-300);
+                    margin-bottom: 0px;
+                    margin-top: 4px;
                 }
             }
+        }
+    }
+}
+
+
+.more-cars {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 64px 0px;
+    & .btn {
+        & a {
+            text-transform: none;
+        }
+    }
+    & span {
+        position: absolute;
+        right: 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--secondary-color-300);
+    }
+}
+
+footer {
+    background-color: var(--primary-color-0);
+    padding: 80px 60px 60px 60px;
+    & .logo {
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        & a {
+            font-weight: 700;
+            font-size: 32px;
+            color: var(--primary-color);
+            font-family: inherit;
+            text-transform: uppercase;
+        }
+        & p {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--footer-color);
+        }
+    }
+
+    
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        & .footer-links {
+            display: flex;
+            gap: 60px;
+            & .links {
+                
+
+                & .title {
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: var(--secondary-color-500);
+                    margin-bottom: 30px;
+                }
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    list-style: none;
+                    margin: 10px 0px;
+
+                    & li {
+                        font-weight: 500;
+                        font-size: 16px;
+                        color: var(--footer-color);
+                    }
+                }
+            }
+
+
+        }
+    }
+    & hr {
+            border: 0;
+            height: 1px;
+            background-color: #13131329;
+            width: 100%;
+            margin: 36px 0px;
+        }
+    & .rights {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 24px;
+        & .policy {
+            display: flex;
+            gap: 60px;
+        }
+        & p {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--secondary-color-500);
         }
     }
 }
@@ -428,12 +571,31 @@ section.popular-car{
 /* animations */
 
 @keyframes jump-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateY(-1px) }
-  35% { transform: translateY(-1px) rotate(17deg) }
-  55% { transform: translateY(-1px) rotate(-17deg) }
-  65% { transform: translateY(-1px) rotate(17deg) }
-  75% { transform: translateY(-1px) rotate(-17deg) }
-  100% { transform: translateY(0) rotate(0) }
-}
+    0% {
+        transform: translateX(0)
+    }
 
+    25% {
+        transform: translateY(-1px)
+    }
+
+    35% {
+        transform: translateY(-1px) rotate(17deg)
+    }
+
+    55% {
+        transform: translateY(-1px) rotate(-17deg)
+    }
+
+    65% {
+        transform: translateY(-1px) rotate(17deg)
+    }
+
+    75% {
+        transform: translateY(-1px) rotate(-17deg)
+    }
+
+    100% {
+        transform: translateY(0) rotate(0)
+    }
+}
